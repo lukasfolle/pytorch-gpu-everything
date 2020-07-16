@@ -20,9 +20,10 @@ class RandomFlip(Augmentation):
         self.dims = dims
 
     def forward(self, x):
-        if self.random_prob_reached():
-            return torch.flip(x, dims=self.dims)
-        return x
+        with torch.no_grad():
+            if self.random_prob_reached():
+                x = torch.flip(x, dims=self.dims)
+            return x
 
 
 class RandomRotate90(Augmentation):
@@ -32,6 +33,8 @@ class RandomRotate90(Augmentation):
         self.max_number_rot = max_number_rot
 
     def forward(self, x):
-        if self.random_prob_reached():
-            num_rotations = int(torch.randint(low=1, high=self.max_number_rot + 1, size=(1,)))
-            return torch.rot90(x, num_rotations, self.dims)
+        with torch.no_grad():
+            if self.random_prob_reached():
+                num_rotations = int(torch.randint(low=1, high=self.max_number_rot + 1, size=(1,)))
+                x = torch.rot90(x, num_rotations, self.dims)
+            return x
