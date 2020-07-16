@@ -15,7 +15,7 @@ Contribution to pytorch hackathon at https://pytorch2020.devpost.com/
 #### Pip installation
 
 1. It is highly recommended to create a virtual environment: \
-`$ virtualenv -p python3.7 venv`
+`$ virtualenv -p python3.7 venv` \
 `$ source venv/bin/activate`
 2. Install necessary packages: \
 `$ pip install -r requirements.txt`
