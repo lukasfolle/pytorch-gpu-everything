@@ -12,6 +12,7 @@ from gpu_everything.preprocessing import ZScoreNorm, Unsqueeze, Squeeze
 def main_traditional():
     args, use_cuda, device, kwargs = parse_args()
 
+    # Code executed on CPU
     transform = transforms.Compose([
         transforms.ToTensor(),
         transforms.Normalize((0.1307,), (0.3081,))
@@ -36,6 +37,7 @@ def main_traditional():
 def main_gpu_everything():
     args, use_cuda, device, kwargs = parse_args()
 
+    # Code executed on GPU
     Augmentations = torch.nn.Sequential(OrderedDict([
         ("RandomFlip", RandomFlip(dims=(0, 1), prob=0.5)),
         ("RandomRotate", RandomRotate90(dims=(0, 1), prob=0.8, max_number_rot=3))]))
