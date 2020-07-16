@@ -6,14 +6,14 @@ Contribution to pytorch hackathon at https://pytorch2020.devpost.com/
 ## Getting started
 
 #### Conda installation
-
 1. Create conda environment: \
 `$ conda create --name team-gpu python=3.7 -y`
 2. Activate environment: \
 `$ conda activate team-gpu`
+3. Install packages: \
+`conda install --file requirements.txt`
 
 #### Pip installation
-
 1. It is highly recommended to create a virtual environment: \
 `$ virtualenv -p python3.7 venv` \
 `$ source venv/bin/activate`
@@ -21,7 +21,6 @@ Contribution to pytorch hackathon at https://pytorch2020.devpost.com/
 `$ pip install -r requirements.txt`
 
 #### Pipenv installation
-
 1. Create a pipenv environment using Python 3.7:\
 `$ pipenv --python 3.7`
 2. Activate environment: \
