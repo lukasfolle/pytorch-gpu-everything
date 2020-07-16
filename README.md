@@ -7,8 +7,8 @@ Contribution to pytorch hackathon at https://pytorch2020.devpost.com/
 
 #### Conda installation
 
-1. Create conda environment: 
-`$ conda create --name team-gpu python=3.7 -y`
+1. Create conda environment: \
+`$ conda create --name team-gpu python=3.7 -y`\
 2. Activate environment: 
 `$ conda activate team-gpu`
 
