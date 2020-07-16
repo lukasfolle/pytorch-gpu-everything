@@ -24,7 +24,9 @@ Contribution to pytorch hackathon at https://pytorch2020.devpost.com/
 
 1. Create a pipenv environment using Python 3.7:\
 `$ pipenv --python 3.7`
-2. Install necessary packages:\
+2. Activate environment: \
+`$ pipenv shell`
+3. Install necessary packages:\
 `$ pipenv install -r requirements.txt`
 
 > **_Note:_**  If you want to make use of GPUs on your system make sure to use `pytorch torchvision cudatoolkit=10.2`.
